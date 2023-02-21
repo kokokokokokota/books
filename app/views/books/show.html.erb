@@ -1,0 +1,9 @@
+<td>Title:</td>
+<td><%= @book.title %></td>
+<br>
+<td>Body:</td>
+<td><%= @book.body %></td>
+<br>
+<td><%= link_to 'Edit', "/books/#{@book.id}/edit" %></td>
+<td>|</td>
+<td><%= link_to 'Back', "/books" %></td>
