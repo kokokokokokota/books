@@ -1,18 +1,32 @@
+<body>
+  <div><%= flash[:notice] %></div>
+
+           <% if @book.errors.any? %>
+           <p>error occurs!</p>
+           <ul>
+           <% @book.errors.full_messages.each do |message| %>
+           <li><%= message %></li>
+           <% end %>
+           </ul>
+           <% end %>
+
   <h1>Editing Book</h1>
 
   <%= form_with model: @book do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-
-  <h4>Body</h4>
-  <%= f.text_area :body %>
+  <div class = field>
+  <label>Title</label>
   <br>
-  <%= f.submit 'Update book' %>
+  <%= f.text_field :title %></div><div class = area>
+  <label>Body</label>
   <br>
-  <group>
-  <td><%= link_to 'show', "/books/#{@book.id}/" %></td>
+   <%= f.text_area :body %></div>
+   <div class = update>
+    <%= f.submit 'Update Book' %>
+   </div>
+  <gruoup>
+  <td><%= link_to 'show', "/books/#{@book.id}" %></td>
   <td>|</td>
   <td><%= link_to 'Back', "/books" %></td>
   </group>
-<% end %>
+  <% end %>
 </body>

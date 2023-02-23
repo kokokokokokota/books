@@ -1,9 +1,15 @@
-<td>Title:</td>
-<td><%= @book.title %></td>
-<br>
-<td>Body:</td>
-<td><%= @book.body %></td>
-<br>
+
+<body>
+<div><%= flash[:notice] %></div>
+<p>
+<td><strong>Title:</strong></td>
+<td><%= @book.title %></td></p>
+
+<p>
+<td><strong>Body:</strong></td>
+<td><%= @book.body %></td></p>
+
 <td><%= link_to 'Edit', "/books/#{@book.id}/edit" %></td>
 <td>|</td>
 <td><%= link_to 'Back', "/books" %></td>
+</body>
