@@ -1,5 +1,5 @@
+<%=flash[:alret]  %>
 <h1>Books</h1>
-
    <table>
      <thead>
        <tr>
@@ -31,6 +31,7 @@
            <li><%= message %></li>
            <% end %>
            </ul>
+
            <% end %>
 
            <%= form_with model: @book do |f| %>
@@ -41,4 +42,3 @@
            <br>
            <%= f.submit 'Create Book' %>
            <% end %>
-
