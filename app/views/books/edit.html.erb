@@ -1,16 +1,16 @@
 <body>
-  <div><%= flash[:notice] %></div>
+           <div class="notice"><%= flash[:notice] %></div>
 
+
+           <h1>Editing Book</h1>
            <% if @book.errors.any? %>
-           <p>error occurs!</p>
+           <div>error occurs!</div>
            <ul>
            <% @book.errors.full_messages.each do |message| %>
            <li><%= message %></li>
            <% end %>
            </ul>
            <% end %>
-
-  <h1>Editing Book</h1>
 
   <%= form_with model: @book do |f| %>
   <div class = field>
@@ -29,4 +29,5 @@
   <td><%= link_to 'Back', "/books" %></td>
   </group>
   <% end %>
+
 </body>
