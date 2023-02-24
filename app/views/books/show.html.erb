@@ -1,5 +1,6 @@
  <div class="notice"><%= flash[:notice] %></div>
 <body>
+    
 <p>
 <td><strong>Title:</strong></td>
 <td><%= @book.title %></td></p>
@@ -11,4 +12,5 @@
 <td><%= link_to 'Edit', "/books/#{@book.id}/edit" %></td>
 <td>|</td>
 <td><%= link_to 'Back', "/books" %></td>
+
 </body>
